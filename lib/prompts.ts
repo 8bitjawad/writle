@@ -1,0 +1,17 @@
+export const PROMPTS = [
+  "Describe something you learned today.",
+  "Write about a moment this week you felt grateful.",
+  "Explain a concept you struggled with in simple words.",
+  "Reflect on a mistake and what it taught you.",
+  "Write about a time you surprised yourself.",
+  "Describe a recent conversation that made you think.",
+  "Explain a topic you know well as if teaching a child.",
+  "Write about something you want to change about your habits.",
+  "Describe the best part of your day.",
+  "Write about a fear you overcame.",
+  "Reflect on a moment you acted differently than usual.",
+  "Explain a problem you solved recently.",
+  "Write about what motivates you currently.",
+  "Describe someone who inspires you.",
+  "Write about what drains your energy.",
+];

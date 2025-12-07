@@ -1,0 +1,63 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id          String       @id @default(cuid())
+  clerkId     String       @unique
+  createdAt   DateTime     @default(now())
+  streak      Streak?
+  submissions Submission[]
+}
+
+model Prompt {
+  id          String       @id @default(cuid())
+  text        String
+  date        DateTime     @unique
+  submissions Submission[]
+}
+
+model Submission {
+  id        String   @id @default(cuid())
+  userId    String
+  promptId  String
+  content   String
+  createdAt DateTime @default(now())
+  score     Score?
+  prompt    Prompt   @relation(fields: [promptId], references: [id])
+  user      User     @relation(fields: [userId], references: [id])
+  feedback  String?
+  writingScore     Float?
+  clarityScore     Float?
+  coherenceScore   Float?
+  vocabularyScore  Float?
+  grammarScore     Float?
+
+}
+
+model Score {
+  id           String     @id @default(cuid())
+  submissionId String     @unique
+  overall      Int
+  grammar      Int
+  readability  Int
+  vocabulary   Int
+  coherence    Int
+  creativity   Int
+  feedback     String
+  submission   Submission @relation(fields: [submissionId], references: [id])
+}
+
+model Streak {
+  id            String    @id @default(cuid())
+  userId        String    @unique
+  current       Int       @default(0)
+  longest       Int       @default(0)
+  lastCompleted DateTime?
+  user          User      @relation(fields: [userId], references: [id])
+}
