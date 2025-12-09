@@ -13,6 +13,7 @@ model User {
   createdAt   DateTime     @default(now())
   streak      Streak?
   submissions Submission[]
+  lastSubmissionDate DateTime?
 }
 
 model Prompt {
