@@ -1,17 +1,23 @@
 import { currentUser } from "@clerk/nextjs/server";
 import { db } from "@/lib/db";
+import { Submission } from "@prisma/client";
 
 export default async function HistoryPage() {
   const user = await currentUser();
-  if (!user) return <p className="p-6 text-red-600">You must be logged in.</p>;
+  if (!user) {
+    return <p className="p-6 text-red-600">You must be logged in.</p>;
+  }
 
-  const submissions = await db.submission.findMany({
+  const submissions: Submission[] = await db.submission.findMany({
     where: { userId: user.id },
     orderBy: { createdAt: "desc" },
   });
 
   return (
-    <div className="max-w-3xl mx-auto p-6 space-y-6" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+    <div
+      className="max-w-3xl mx-auto p-6 space-y-6"
+      style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
+    >
       <h1 className="text-3xl font-semibold">Your Writing History</h1>
 
       {submissions.length === 0 && (
@@ -33,9 +39,7 @@ export default async function HistoryPage() {
               })}
             </p>
 
-            <p className="mt-2 text-gray-700 line-clamp-3">
-              {s.content}
-            </p>
+            <p className="mt-2 text-gray-700 line-clamp-3">{s.content}</p>
           </a>
         ))}
       </div>
