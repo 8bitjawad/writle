@@ -7,11 +7,13 @@ export default async function HistoryPage() {
     return <p className="p-6 text-red-600">You must be logged in.</p>;
   }
 
-  // Prisma auto-infers types — no need to annotate
   const submissions = await db.submission.findMany({
     where: { userId: user.id },
     orderBy: { createdAt: "desc" },
   });
+
+  // 👇 Automatically infer the type of each item in submissions[]
+  type SubmissionType = typeof submissions[number];
 
   return (
     <div
@@ -25,7 +27,7 @@ export default async function HistoryPage() {
       )}
 
       <div className="space-y-4">
-        {submissions.map((s) => (
+        {submissions.map((s: SubmissionType) => (
           <a
             href={`/history/${s.id}`}
             key={s.id}
