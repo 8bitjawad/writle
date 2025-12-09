@@ -1,7 +1,6 @@
-import type { Submission } from "@prisma/client";
 
 type StatsCardsProps = {
-  submissions: Submission[];
+  submissions: any[];
 };
 
 export default function StatsCards({ submissions }: StatsCardsProps) {
