@@ -12,6 +12,9 @@ export default function RootLayout({
   return (
     <ClerkProvider>
     <html lang="en" className="light">
+      <head>
+        <meta name="color-scheme" content="light only" />
+      </head>
       <body className="bg-neutral-950 text-white" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
         <header className="border-b border-neutral-800">
           <nav className="mx-auto flex max-w-4xl items-center justify-between px-4 py-4">
