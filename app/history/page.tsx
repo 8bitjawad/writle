@@ -1,6 +1,5 @@
 import { currentUser } from "@clerk/nextjs/server";
 import { db } from "@/lib/db";
-import { Submission } from "@prisma/client";
 
 export default async function HistoryPage() {
   const user = await currentUser();
@@ -8,7 +7,8 @@ export default async function HistoryPage() {
     return <p className="p-6 text-red-600">You must be logged in.</p>;
   }
 
-  const submissions: Submission[] = await db.submission.findMany({
+  // Prisma auto-infers types — no need to annotate
+  const submissions = await db.submission.findMany({
     where: { userId: user.id },
     orderBy: { createdAt: "desc" },
   });
