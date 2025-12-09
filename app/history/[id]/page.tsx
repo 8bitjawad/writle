@@ -9,7 +9,7 @@ export default async function SubmissionPage({ params }: { params: { id: string 
   const submission = await db.submission.findFirst({
     where: {
       id: params.id,
-      userId: user.id, // user must only access their own submissions
+      userId: user.id,
     },
   });
 

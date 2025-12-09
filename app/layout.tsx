@@ -12,7 +12,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
     <html lang="en">
-      <body className="bg-neutral-950 text-white">
+      <body className="bg-neutral-950 text-white" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
         <header className="border-b border-neutral-800">
           <nav className="mx-auto flex max-w-4xl items-center justify-between px-4 py-4">
             {/* Logo */}
@@ -20,7 +20,7 @@ export default function RootLayout({
               Writle
             </Link>
 
-            <div className="flex gap-6 text-sm text-neutral-300">
+            <div className="flex gap-6 text-sm text-purple-800">
               <Link href="/write">Write</Link>
               <Link href="/dashboard">Dashboard</Link>
               <Link href="/history">History</Link>

@@ -21,7 +21,10 @@ export default function Home() {
     { name: 'Next.js', icon: '▲' },
     { name: 'React.js', icon: '⚛' },
     { name: 'Tailwind CSS', icon: '🎨' },
-    { name: 'Llama 3', icon: '🤖' }
+    { name: 'Llama 3', icon: '🤖' },
+    { name: "Prisma", icon: "◭" },
+    { name: "Clerk", icon: "🔑" },
+    { name: "Supabase", icon: "⚡" },
   ];
 
   return (

@@ -11,7 +11,7 @@ export default async function HistoryPage() {
   });
 
   return (
-    <div className="max-w-3xl mx-auto p-6 space-y-6">
+    <div className="max-w-3xl mx-auto p-6 space-y-6" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
       <h1 className="text-3xl font-semibold">Your Writing History</h1>
 
       {submissions.length === 0 && (

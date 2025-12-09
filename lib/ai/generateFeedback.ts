@@ -53,3 +53,11 @@ Rules:
     return null;
   }
 }
+export type WritingFeedback = {
+    feedback: string;
+    writingScore: number;
+    clarityScore: number;
+    coherenceScore: number;
+    vocabularyScore: number;
+    grammarScore: number;
+  };

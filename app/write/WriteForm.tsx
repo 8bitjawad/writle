@@ -38,6 +38,12 @@ export default function WriteForm({
           {isPending ? "Submitting..." : "Submit"}
         </button>
       </form>
+    
+    {typeof result?.streak === "number" && (
+        <div className="bg-orange-100 text-orange-800 px-3 py-2 rounded-md inline-block">
+          🔥 {result.streak}-day streak
+        </div>
+      )}
 
      {result?.feedback && (
         <div>
@@ -45,7 +51,7 @@ export default function WriteForm({
           <p>{result.feedback}</p>
         </div>
       )}
-      {result?.writingScore && (
+      {typeof result?.writingScore === "number" && (
       <div className="p-4 border rounded-lg bg-green-50">
         <h2 className="text-lg font-semibold mb-2 text-green-700">Writing Scores</h2>
         <ul className="text-gray-800 space-y-1">
