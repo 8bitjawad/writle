@@ -30,7 +30,7 @@ export default function ScoreChart({ submissions } : ScoreChartProps ) {
     score: s.writingScore ?? 0,
   }));
   if (data.length === 0) {
-    return <p className="text-sm text-gray-500">No score data yet.</p>;
+    return <p className="text-sm text-black">No score data yet.</p>;
   }
   return (
     <div className="h-64">

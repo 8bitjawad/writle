@@ -20,18 +20,18 @@ export default function StatsCards({ submissions }: StatsCardsProps) {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
       <div className="p-5 bg-white shadow rounded-xl">
-        <p className="text-sm text-gray-500">Total Submissions</p>
-        <p className="text-2xl font-bold">{total}</p>
+        <p className="text-sm text-black">Total Submissions</p>
+        <p className="text-2xl text-black font-bold">{total}</p>
       </div>
 
       <div className="p-5 bg-white shadow rounded-xl">
-        <p className="text-sm text-gray-500">Average Score</p>
-        <p className="text-2xl font-bold">{avgScore}</p>
+        <p className="text-sm text-black">Average Score</p>
+        <p className="text-2xl text-black font-bold">{avgScore}</p>
       </div>
 
       <div className="p-5 bg-white shadow rounded-xl">
-        <p className="text-sm text-gray-500">Current Streak</p>
-        <p className="text-2xl font-bold">{currentStreak}</p>
+        <p className="text-sm text-black">Current Streak</p>
+        <p className="text-2xl text-black font-bold">{currentStreak}</p>
       </div>
     </div>
   );

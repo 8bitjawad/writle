@@ -47,7 +47,7 @@ export default function Heatmap({ submissions }: HeatmapProps) {
 
   return (
     <div>
-      <h3 className="text-xl font-semibold mb-4">Last 90 Days Activity</h3>
+      <h3 className="text-xl text-black font-semibold mb-4">Last 90 Days Activity</h3>
 
       <div className="grid grid-cols-15 gap-1">
         {boxes.map((box) => (
@@ -62,7 +62,7 @@ export default function Heatmap({ submissions }: HeatmapProps) {
         ))}
       </div>
 
-      <p className="text-sm text-gray-500 mt-2">
+      <p className="text-sm text-black mt-2">
         Green = days you wrote something.
       </p>
     </div>

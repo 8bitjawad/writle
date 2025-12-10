@@ -27,22 +27,22 @@ export default async function DashboardPage() {
       <StatsCards submissions={submissions} />
 
       <div className="bg-white shadow p-6 rounded-xl">
-        <h2 className="text-xl font-semibold mb-4">Score Trend Over Time</h2>
+        <h2 className="text-xl text-black font-semibold mb-4">Score Trend Over Time</h2>
         <ScoreChart submissions={submissions} />
       </div>
 
       <section className="bg-white shadow p-6 rounded-xl">
-        <h2 className="text-xl font-semibold mb-4">Writing Skill Breakdown</h2>
+        <h2 className="text-xl text-black font-semibold mb-4">Writing Skill Breakdown</h2>
         <WritingRadarChart submissions={submissions} />
       </section>
 
       <div className="bg-white shadow p-6 rounded-xl">
-        <h2 className="text-xl font-semibold mb-4">Streak Progress</h2>
+        <h2 className="text-xl text-black font-semibold mb-4">Streak Progress</h2>
         <StreakChart submissions={submissions} />
       </div>
 
       <div className="bg-white shadow p-6 rounded-xl">
-        <h2 className="text-xl font-semibold mb-4">Weekly Activity</h2>
+        <h2 className="text-xl text-black font-semibold mb-4">Weekly Activity</h2>
         <WeeklyBarChart submissions={submissions} />
       </div>
     </div>

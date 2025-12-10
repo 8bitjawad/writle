@@ -32,7 +32,7 @@ export default function Home() {
 
       <div className="max-w-3xl text-center space-y-8">
         <div className="space-y-4">
-          <h1 className="text-6xl font-extrabold tracking-tight text-gray-900">
+          <h1 className="text-6xl font-extrabold tracking-tight">
             Welcome to <span className="bg-gradient-to-r from-purple-600 to-purple-400 bg-clip-text text-transparent">Writle</span>
           </h1>
           <div className="h-1 w-24 bg-gradient-to-r from-purple-600 to-purple-400 mx-auto rounded-full"></div>
