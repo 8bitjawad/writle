@@ -37,9 +37,9 @@ export default async function WritePage() {
 
   return (
     <div className="p-6 max-w-2xl mx-auto space-y-4" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
-      <h1 className="text-3xl text-black font-bold">Today's Prompt</h1>
+      <h1 className="text-3xl font-bold">Today's Prompt</h1>
 
-      <p className="text-lg bg-gray-100 p-4 rounded">{prompt.text}</p>
+      <p className="text-lg text-black bg-gray-100 p-4 rounded">{prompt.text}</p>
 
       <WriteForm promptId={prompt.id} prismaUserId={prismaUserId} />
     </div>
